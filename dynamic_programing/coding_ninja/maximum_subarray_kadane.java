@@ -3,8 +3,8 @@ public class Solution {
    
     public static long maxSubarraySum(int[] arr, int n) {
         // write your code here
-      int max=0;
-      int curr_sum=0;
+      long max=0;
+      long curr_sum=0;
       for(int i =0;i<n;i++)
       {
             curr_sum+= arr[i];
