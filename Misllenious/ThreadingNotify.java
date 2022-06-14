@@ -70,8 +70,6 @@ class Consumer implements Runnable
             try{  Thread.sleep(1000);} catch (Exception e){}
         }
     }
-
-
 }
 
 
@@ -84,7 +82,6 @@ public class InnerCommunicationThread {
 
         new Producer(q);
         new Consumer(q);
-
 
     }
 
