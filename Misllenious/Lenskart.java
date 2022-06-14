@@ -34,7 +34,7 @@ class hello implements  Runnable
         for (int i = 1;i<n ;i++)
         {
             System.out.print(" hi ");
-          try{  Thread.sleep(1000);} catch (Exception e){}
+            try{  Thread.sleep(1000);} catch (Exception e){}
         }
 
     }
@@ -53,10 +53,11 @@ public class Lenskart   {
         if (b==1)
             return a;
 
+        int t = powFuntion(a,b/2);
         if (b%2==0)
-        return powFuntion(a,b/2)*powFuntion(a,b/2);
+            return t*t;
 
-        return a* powFuntion(a,b/2)*powFuntion(a,b/2);
+        return t*t*a;
 
     }
 
@@ -66,7 +67,7 @@ public class Lenskart   {
 
         System.out.println("Thread 1");
 
-       int ans=  powFuntion(2,5);
+        int ans=  powFuntion(2,10);
 
         System.out.println(ans);
 
