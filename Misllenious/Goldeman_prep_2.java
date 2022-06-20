@@ -11,7 +11,6 @@
            seq.append(".");
 
            HashMap<Integer,Integer> h1 = new HashMap<>();
-
            while (remainder!=0)
            {
                if (h1.containsKey(remainder))
