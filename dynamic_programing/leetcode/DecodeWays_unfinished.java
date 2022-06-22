@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class DecodeWays {
 
     static int ways=0;
@@ -37,17 +39,42 @@ public class DecodeWays {
 
     }
 
+    static int  help2(int start, String s,int[] dp)
+    {
+        if (start<=0)
+        {
+            return 1;
+        }
+        if (dp[start]!=-1)
+            return dp[start];
+
+        int takeone=0,takeTwo=0;
+
+         if (s.charAt(start-1)!='0')
+         takeone =  help2(start-1,s,dp);
+
+         if(start>1) {
+             int digit = Integer.parseInt(s.substring(start - 2, start));
+             if (digit > 9 && digit < 27)
+                 takeone +=  help2(start - 2, s,dp);
+         }
+        return dp[start]= takeone ;
+    }
+
     public static int numDecodings(String s) {
 
-        help(0,s);
-
-        return ways;
+        int[] dp = new int[s.length()+1];
+        Arrays.fill(dp,-1);
+        return help2(s.length(),s,dp);
     }
 
 
     public static void main(String[] args) {
 
 
-        System.out.println(numDecodings("226"));
+        //System.out.println(numDecodings("226"));
+        String s = "111111111111111111111111111111111111111111111";
+
+        System.out.println(numDecodings(s));
     }
 }
