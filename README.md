@@ -6,7 +6,7 @@
 
 #main function may not be present in some question
 
-#codesignal is website used for questions.
+#codesignal,leetcode,coding ninja is website used for questions.
 
 #mislleniuos 
 
