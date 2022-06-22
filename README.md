@@ -7,3 +7,7 @@
 #main function may not be present in some question
 
 #codesignal is website used for questions.
+
+#mislleniuos 
+
+#this folder contain all the codes that are solved in interview, assement, or prep for that perticulat company
