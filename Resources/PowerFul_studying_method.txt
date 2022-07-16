@@ -1,0 +1,135 @@
+
+#below is link to the post and the post itself
+https://leetcode.com/discuss/general-discussion/1129503/powerful-studying-program-for-beginners-and-intermediate-levels-all-common-mistakes-analyzed
+
+
+Hello everyone. Today I want to write a post about a program for learning data structures and algorithms. I heard this question about studying a program a lot and wanted to create a styling program for beginners and intermediate levels. Also, I saw many mistakes which my friends, and coders and I made and by analyzing all of such mistakes I wanted to write and construct the correct program. In the beginning, I created this program for myself, I tested it and it helped me to learn data structures and algorithms just within 6 months. Within these 6 months I learned and mastered the following topics:
+
+Linked List
+Stack
+Queue
+Binary Search Tree
+Hash Table and Map
+Sorting algorithms
+Searching algorithms
+Greedy Algorithms
+Dynamic Programming basics
+Graph BFS and DFS
+I am now continuing to learn by the program which I created and it helps me to learn topics faster, efficiently and on a long-term basis. I can solve the problems which I solved and similar problems in a fast way. So let's dive into the program which I created for myself and you.
+
+First of all, let me analyze all the common mistakes which coders continue to make.
+
+1. UNDERESTIMATE TIME COMPLEXITY FINDING
+I always see the coders who underestimate and do not study time complexities. What do you think will be the result of not knowing the time complexities? Yes, the probability that you will have Time Limit Exceeded is very high. I strongly advise firstly to learn time complexities. Before even writing your code you should be able to analyze its time complexity.
+You may ask how? For example, if you are going to use for the inside of other for then the time complexity of your program will be O(n^2), if you are going to use map inside for then your time complexity will probably be O(nlogn), if you are going to use bubble sort then your time complexity will be O(n^2).
+
+Tips before writing a code:
+
+Look for the input range. Is it small or too big? Calculate in such a way: 10^9 operations will take around 1 second so try to make the number of operations which your code will run under 10^9.
+Try to think of all possible data structures you can apply and analyze time complexity. If you have an option between using for inside other for and hash table inside one for then the time complexity of the first solution will be O(n^2) and of the second option will be O(n). It is obvious that it is better to use a hash table to make less time complexity.
+Have strong knowledge of time complexities.
+Resources for learning time complexities:
+
+MIT 6.001 course, Understanding Program Efficiency Part 1 and Part 2 on YouTube
+MIT 6.006 course on YouTube
+Abdul Bari Algorithms on YouTube
+All of these resources helped me to master time complexity finding. They show deep analysis in finding different time complexities.
+
+2. DO NOT SPEND TIME FOR LEARNING THEORY
+You always should have a knowledge and understanding of the data structure or algorithm which you are going to use. You should know the working principle of different data structures and algorithms. For example in which cases it is better to use insertion sort rather than quicksort, how stack and queue work, or when it is useful to apply hash table for solving problems. For example, a stack can be used for counting parentheses and reversing a string, hash table for fast find the value by key, for fast access in other words, etc. I promise you to deeply learn theory but do not spend too much time on it.
+
+Best resources for learning theory:
+
+MIT Algorithms on YouTube
+Jenny's Lectures on YouTube
+Abdul Bari Algorithms on YouTube
+Mycodeschool on YouTube
+3. NOT REVISING AND DOING A LOT OF PROCRASTINATION
+I always heard that people cannot or spend too much time for solving problems which they solved already. Some are not sure that they can solve the problem which they already solved. That is a huge problem and I think that the possible reasons are:
+
+Not revising
+Not enough learning a theory
+Procrastinating by studying one day and having a rest for several days.
+I think that programming is like a sport. For example, to succeed in the sport you will always need to train, repeat your training program, again and again, add some new training methods and exercises, and never give up. The main thing is discipline. You always should revise the topics by solving several problems for them to not forget them and master them. You should apply the knowledge and techniques which you learned by studying the theory immediately to problem-solving. Learn theory and immediately go to practice. Think that theory is your personal trainer and you are the athlete who is going to practice that again and again while you do not master it.
+
+Tips for learning for the long term:
+
+Revising all topics, even two times a week
+Solve some problems and revise your solved problems every week
+Write contests
+Learn theory and have a strong foundation
+Do something each day
+You may ask why I mentioned writing contests? The answer is that competition will give you additional motivation for learning. You will see your level and will want to have a better rating and will you will begin training by studying and practising. Also try to solve at least one problem each day for 21 days, after 21 days you will automatically have a habit to go and solve problems. Do not procrastinate. NEVER DO THAT! If you will procrastinate for 3 days you will have a habit to continue doing that and as a result, the work that you already did will have no meaning, you will just lose your time.
+Discipline and hard work are the keys to success.
+
+Now let's consider the topics which you need to learn and how. Let's discuss the program.
+
+Program:
+1. Time complexities
+Learn mainly Big-O notation and analyzing the time complexity of the program which you wrote
+Practice by considering tests and some quizzes from the internet
+Advised time to spend: 1 week
+2. Recursion
+Learn how the recursion works
+Try to write some basic problems by recursion and solve LeetCode problems for recursion
+Advised time to spend: 1 week
+3. Linked List
+Learn the concept of a linked list
+Insertion and deletion of nodes at different positions
+Time complexity and advantages of using it
+When and in what problems to apply
+Linked List traversals. Both iterative and recursive ways
+Solve LeetCode problems
+Advised time to spend: 1-1.5 weeks
+List of advised problems: https://leetcode.com/list/50sfo32d
+4. Stack and Queue
+Learn the basics of stack and queue
+How they work and how to implement them
+Their basic operations: push(), pop(), top() and etc.
+Time complexities and advantages of using them
+Consider different standard problems such as Valid Parentheses, Reversing Linked List and String
+Advised time to spend: 1-1.5 weeks
+List of advised problems: https://leetcode.com/list/504xdrcr
+5. Binary Search Tree
+Properties, terms, and the meaning of Binary Search Trees
+How to search, add and delete nodes in BST and their time complexities
+Main traversals such as BFS: Level-order-traversal and DFS: Preorder, Inorder, Postorder. Think about both recursive ways and iterative ways where will need to apply the knowledge of stack and queue
+Advised time to spend: 2-2.5 weeks
+List of advised problems: https://leetcode.com/list/504mfxd2
+6. Hash Table and Map
+The meaning and work principle of Hash Table and Map
+The difference between Hash Table and Map
+Their time complexities and how to apply during problem-solving
+Learn the main functions and their library
+Advised time to spend: 2-2.5 weeks
+List of advised problems: https://leetcode.com/list/504wrexe
+7. Sorting and Searching Algorithms
+Bubble Sort, Insertion Sort, Selection Sort, Merge Sort, Quick Sort, Count Sort, Radix Sort.
+Learn the working principle and time complexity of each of the sorting algorithms and their advantages over each other
+Linear Search, Binary Search, Ternary Search
+Learn the working principle and time complexity of each of the searching algorithms and their advantages over each other
+Advised time to spend: 2-3 weeks
+List of advised problems for sorting: https://leetcode.com/list/5047kw65
+List of advised problems for searching: https://leetcode.com/list/504ixc37
+8. Greedy Algorithms
+How to use sorting and hash table
+Understand the logic of some basic problems
+The main thing to master greedy algorithms is to practice a lot
+Advised time to spend: 2.5-3 weeks
+List of advised problems: https://leetcode.com/list/5ik01ftj
+9. Dynamic Programming
+Solutions of basic problems
+Check my this post: https://leetcode.com/discuss/general-discussion/1081421/powerful-dynamic-programming-explanation
+Advised time to spend: 4-5 weeks
+10. Graphs
+Learn different graph traversals such as BFS and DFS
+Learn Minimum Spanning Trees and their different algorithms
+Learn the Shortest Paths and its algorithms
+Learn Topological sort and priority queue
+Learn the basic work principle of each algorithm and the way of applying them
+Advised time to spend: 4-5 weeks
+11. String Processing
+Learn different algorithms on strings
+Learn trie and solve problems
+Advised time to spend: 1-2 weeks
+For all of these sections, you will work by analyzing the common mistakes section. I hope this post and this training problem will help you with your coding journey. Thanks!
