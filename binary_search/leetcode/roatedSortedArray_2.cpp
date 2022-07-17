@@ -1,3 +1,6 @@
+#attempt 2
+
+
 class Solution {
 public:
     bool search(vector<int>& nums, int target) {
@@ -11,21 +14,25 @@ public:
             
             if(nums[mid]== target ) return true;
             
-            if(nums[min] <= nums[mid])
+            if(nums[min] == nums[mid] && nums[mid] == nums[max])
             {
-                if(target >= nums[mid] )
-                    min = mid + 1;
-                else
-                    max = mid - 1;
+                min += 1;
+                max -= 1;
             }
+            else if(nums[min] > target)
+            {
+                if(nums[mid] > target)
+                     max = mid - 1;
+                else
+                    min = mid + 1;
+            }
+            
             else
             {
-                
-                if(target < nums[mid])
-                    max = mid - 1;
+                if(nums[mid] < target)
+                     min = mid +1 ;
                 else
-                    min = mid + 1;
-                
+                    max = mid -1;
             }
                 
         }
