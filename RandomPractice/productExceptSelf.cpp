@@ -47,22 +47,17 @@ public:
                 nums[i] = product;
         }
         
-        
         if(CountZeros >= 2)
             for(int i =0 ;i<nums.size() ;i++)
             {
                 nums[i] = 0;
             }
         
-        
        if(CountZeros == 0)
        {
          for(int i =0 ;i<nums.size() ;i++)
         {
-             
             nums[i] =  division(product, nums[i]);
-            
-             
         }
        }
         return nums;
