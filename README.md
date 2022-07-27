@@ -22,3 +22,14 @@ https://github.com/cl2333/Grokking-the-Coding-Interview-Patterns-for-Coding-Ques
 
 #another link where details of study is mentioned   this link content will be pasted in one file in this dict
 https://leetcode.com/discuss/general-discussion/1129503/powerful-studying-program-for-beginners-and-intermediate-levels-all-common-mistakes-analyzed
+
+
+
+#competative material free cources
+
+Beginners Classes - https://unacademy.com/a/beginners-cla...
+Intermediate Classes - https://unacademy.com/a/intermediate-...
+Advanced Classes - https://unacademy.com/a/advanced-clas...
+
+
+Become a Competitive Programming Hero with these structured batches to help all levels of programmers sharpen their skills: https://unacademy.com/goal/competitiv... 
