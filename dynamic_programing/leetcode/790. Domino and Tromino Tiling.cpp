@@ -94,6 +94,32 @@ int numTilings(int n) {
     return ans;
 }
 
+
+//iterative approach
+int numTilings_iterative(int n) {
+
+    
+    if(n==1) return 1;
+    if(n==2) return 2;
+    int dp2[n+1];
+    memset(dp2, 0, sizeof(dp2));
+    dp2[0] = 1;
+    dp2[1] = 1;
+    dp2[2] = 2;
+    dp2[3] = 5;
+
+    for(int k =4 ; k<= n ; k++)
+    {
+      
+        dp2[k] = ((2*dp2[k-1])%mod + dp2[k-3]  % mod )  % mod; 
+
+    }
+
+
+    return dp2[n];
+
+}
+
 int main()
 {
      //n =10  ans 1255;
