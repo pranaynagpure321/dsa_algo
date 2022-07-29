@@ -24,8 +24,6 @@ class Solution {
         
         if(nums.length==2) return 1;
         
-         ans=Integer.MAX_VALUE;
-        
          return help(nums,0);
         
     }
