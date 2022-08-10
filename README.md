@@ -37,3 +37,6 @@ Best article on graph -https://leetcode.com/discuss/study-guide/2360573/become-m
 
 
 free website to learn projects - https://www.youtube.com/watch?v=9poQN8U1QTw&ab_channel=KunalKushwaha
+
+
+DSA free assignments => https://github.com/kunal-kushwaha/DSA-Bootcamp-Java/tree/main/assignments
