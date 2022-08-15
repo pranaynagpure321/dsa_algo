@@ -18,7 +18,22 @@ Example 1:
 
 Input: x = 123
 Output: 321
-Example 2:*/
+Example 2:
+
+int reverse(int x) {
+        int ans = 0;
+        while (x) {
+            int temp = ans * 10 + x % 10;
+            if (temp / 10 != ans)
+                return 0;
+            ans = temp;
+            x /= 10;
+        }
+        return ans;
+    }
+
+
+*/
 
 
 class Solution {
