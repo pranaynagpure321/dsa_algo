@@ -40,3 +40,6 @@ free website to learn projects - https://www.youtube.com/watch?v=9poQN8U1QTw&ab_
 
 
 DSA free assignments => https://github.com/kunal-kushwaha/DSA-Bootcamp-Java/tree/main/assignments
+
+
+how to effectively use leetcode => https://www.youtube.com/watch?v=a-thH9a9_XE&list=PLTOk9tPMcO4jgDUEbumNFHi52f7HUX8lQ&ab_channel=PIRATEKING
