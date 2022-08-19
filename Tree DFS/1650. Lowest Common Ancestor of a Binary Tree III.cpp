@@ -33,6 +33,19 @@ public:
     Node* right;
     Node* parent;
 };
+
+//optimized but slow solution
+ Node* lowestCommonAncestor(Node* p, Node * q) {
+        Node *a = p ,*b = q;
+        
+        while(a!=b)
+        {
+            a = a == NULL ? p : (*a).parent;
+            b = b == NULL ? q : b->parent;
+        }
+        
+        return a;
+    }
 */
 
 class Solution {
