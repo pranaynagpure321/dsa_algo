@@ -47,3 +47,6 @@ how to effectively use leetcode => https://www.youtube.com/watch?v=a-thH9a9_XE&l
 
 list of most famous 75 most asked question => https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-75-LeetCode-Questions-to-Save-Your-Time-OaM1orEU
 above list was created by facebook employee must complete these questions
+
+
+System Design  Interview Preparation Material=> https://github.com/donnemartin/system-design-primer
