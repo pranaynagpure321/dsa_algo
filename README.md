@@ -13,6 +13,10 @@
 #this folder contain all the codes that are solved in interview, assement, or prep for that perticulat company
 
 
+#study guide for software-engineers 
+#it contains every topic (SQL, DSA, OS, DESIGN PATTERNS,SYSTEM DESIGN, BigO)
+https://dev.to/seattledataguy/the-interview-study-guide-for-software-engineers-764
+
 #to access yourself interms of coding , where you stand
 https://medium.com/swlh/my-preparation-journey-for-google-interviews-f41e2dc3cdf9
 
