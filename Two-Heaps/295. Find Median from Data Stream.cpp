@@ -14,44 +14,42 @@ public:
     
     void addNum(int num) {
         
-        int m= maxheap.size();
-        int n = minheap.size();
+       
         if(maxheap.size() == 0) maxheap.push(num);  //if maxheap is empty then directlypush onto it
         
-        else if(m>n) 
+        else if(maxheap.size() > minheap.size()) 
         {
             //if size of maxheap is greater then  find mini element from current number and top of maxheap
             
-            int t = maxheap.top();
+            int choosemin = min( maxheap.top(), num);
+            int choosemax = max( maxheap.top(),num);
             maxheap.pop();
-            int choosemin = min(t, num);
-            int choosemax = max(t,num);
-            
             maxheap.push(choosemin);         //push minimum element on to maxheap
             minheap.push(choosemax);         //push maximum element on to minheap
         }
         else
         {
              //if size of minheap is greater or equal to maxheap,  find mini element from current number and top of minheap
-            int top = minheap.top();
-            minheap.pop();
-            int choosemin = min(top, num);
-            int choosemax = max(top,num);
             
+            int choosemin = min(minheap.top(), num);
+            int choosemax = max(minheap.top(),num);
+            minheap.pop();
             maxheap.push(choosemin);   //push minimum of those two element on maxheap
             minheap.push(choosemax);   //push max of those two on min heap
-        }   
+        }
+        
         count++;
     }
+    
     double findMedian() {
         if(count%2 !=0 )  //find median if no of elemnts is not even
         {
             if(maxheap.size() > minheap.size() )
                 return maxheap.top();
-            
             else
                 minheap.top();
         }
+        
         return  (maxheap.top() + minheap.top())/2.0;    //return median if size is even
     }
     
