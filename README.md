@@ -54,3 +54,6 @@ above list was created by facebook employee must complete these questions
 
 
 System Design  Interview Preparation Material=> https://github.com/donnemartin/system-design-primer
+
+
+java collection explanation => https://www.callicoder.com/java-priority-queue/
