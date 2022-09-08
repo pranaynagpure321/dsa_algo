@@ -57,3 +57,5 @@ System Design  Interview Preparation Material=> https://github.com/donnemartin/s
 
 
 java collection explanation => https://www.callicoder.com/java-priority-queue/
+
+java exclusive problems preparation =>https://www.sanfoundry.com/java-program-implement-heaps-algorithm-permutation-n-numbers/
