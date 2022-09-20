@@ -32,15 +32,11 @@ public:
          chars.clear();
 
         for ( char c : s ) {                         // push value of string to vector
-
             chars.push_back(c);
-
         }
        // cout<<s;
-        
         //time O(n)
         //space O(1)
         return chars.size();
-
     }
 };
