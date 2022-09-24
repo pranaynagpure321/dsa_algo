@@ -81,3 +81,30 @@ public:
         return size == mp.size();
     }
 };
+
+// 3rd approach
+class Solution {
+public:
+    bool hasAllCodes(string s, int k) {
+        //rolling hash
+        unordered_set<string > mp;
+        int n = s.length();
+        
+        if(k> n) return false;
+        
+        string tmp =s.substr(0,k);
+        mp.insert(tmp);
+        
+        for (int i = k-1; i <n; i++) {
+            
+            tmp.erase(0,1);
+            tmp += s[i];
+            mp.insert(tmp);
+        }
+        
+        int size = 1<<k;
+        
+        // time O(n)
+        return size == mp.size();
+    }
+};
