@@ -59,3 +59,25 @@ public:
         return true;
     }
 };
+
+//second solution
+
+class Solution {
+public:
+    bool hasAllCodes(string s, int k) {
+         unordered_set<string > mp;
+        int n = s.length();
+        
+        if(k> n) return false;
+
+        for (int i = 0; i <= n-k; i++) {
+            string tmp = s.substr(i,k); 
+            mp.insert(tmp);
+        }
+        
+        int size = round(pow(2,k));
+        
+        // time O(n*k)
+        return size == mp.size();
+    }
+};
