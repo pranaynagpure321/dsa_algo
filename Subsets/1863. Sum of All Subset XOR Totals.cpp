@@ -19,5 +19,9 @@ public:
         }
         
         return ans;
+     
+     // alternative approach
+      return accumulate(begin(n), end(n), 0, bit_or<int>()) << (n.size() - 1);
+     
     }
 };
