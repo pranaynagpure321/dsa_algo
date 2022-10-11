@@ -13,7 +13,6 @@ public:
             
             return ans;
         }
-        
         vector<vector<int>> adj(n, vector<int>());
 
         for (auto& edge : edges)
