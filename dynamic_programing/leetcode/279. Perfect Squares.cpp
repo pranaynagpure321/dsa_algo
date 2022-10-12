@@ -37,3 +37,26 @@ public:
        return dfs(n,dp); 
     }
 };
+
+
+
+
+//tabulation
+
+class Solution {
+    public int numSquares(int n) {
+        
+        int[] dp = new int[n+1];
+        for(int j =1; j<= n ;j++)
+        {
+            int ans =Integer.MAX_VALUE;
+            for(int i =(int) Math.sqrt(j) ;i>=1 ;i--)
+            {
+                ans  = Math.min(ans , 1+dp [j - (i*i)]) ;
+            }
+            dp[j] =ans;
+        }
+        
+        return dp[n];
+    }
+}
