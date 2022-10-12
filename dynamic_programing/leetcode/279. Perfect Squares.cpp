@@ -1,13 +1,6 @@
 class Solution {
 public:
-    
-    bool isSquare(int n)
-    {
-        int a = (int)sqrt(n);
-        return a*a==n;
-    }
-    
-    
+  
     int dfs(int n , vector<int>& dp)
     {
        if(n ==0 )
@@ -28,18 +21,11 @@ public:
         return dp[n];
     }
     int numSquares(int n) {
-        
-        if(isSquare(n))
-            return 1;
-        
         vector<int> dp(n+1,INT_MAX);
         
        return dfs(n,dp); 
     }
 };
-
-
-
 
 //tabulation
 
@@ -56,7 +42,6 @@ class Solution {
             }
             dp[j] =ans;
         }
-        
         return dp[n];
     }
 }
