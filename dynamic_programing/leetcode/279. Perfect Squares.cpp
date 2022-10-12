@@ -22,7 +22,7 @@ public:
     }
     int numSquares(int n) {
         vector<int> dp(n+1,INT_MAX);
-        
+           // time O(N * sqrt(n))
        return dfs(n,dp); 
     }
 };
@@ -42,6 +42,8 @@ class Solution {
             }
             dp[j] =ans;
         }
+      
+      // time O(N * sqrt(n))
         return dp[n];
     }
 }
