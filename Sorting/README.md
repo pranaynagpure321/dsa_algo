@@ -1,6 +1,6 @@
 custome *comparator class*
 
-```
+```c++
 class cmp
 {
     int xp;
