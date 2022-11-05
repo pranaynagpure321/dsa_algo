@@ -10,9 +10,7 @@ class RandomizedSet {
     
     public boolean insert(int val) {
         boolean present = mp.containsKey(val);
-
         if(present) return false;
-      
         arr.add(val);
         mp.put(val, arr.size()-1);  
         return true;
@@ -27,18 +25,14 @@ class RandomizedSet {
         // then remove last element from array as well as map
         int last = arr.get(arr.size()-1);
         int idx = mp.get(val);
-       // System.out.println("before removal=> "+Arrays.toString(arr.toArray()));
+         // System.out.println("before removal=> "+Arrays.toString(arr.toArray()));
         arr.set(idx,last);
         arr.remove(arr.size()-1);
 
         //System.out.println("After removal=> "+Arrays.toString(arr.toArray()));
         mp.remove(val);
-        mp.replace(last,idx);
-        // for (var name: mp.keySet()) {
-        //     String key = name.toString();
-        //     String value = mp.get(name).toString();
-        //     System.out.println(key + " " + value);
-        // }
+        mp.replace(last,idx);  //if element is not presnet in map replace will do nothing hence used
+         
         return true;
     }
     
