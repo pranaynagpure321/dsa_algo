@@ -17,7 +17,6 @@ class Solution {
     }
 }
 
-
 // my approach in cpp
 class Solution {
 public:
