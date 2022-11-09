@@ -29,20 +29,12 @@ class StockSpanner {
  
  
  //my own solution 
- 
 class Node
 {
     public:
     int val;
     int currSpanner;
     Node *PreViousGreater ;
-
-    Node(int v)
-    {
-        val =v;
-        currSpanner =0;
-        PreViousGreater =NULL;
-    }
     Node(int v, int spanner)
     {
         val =v;
@@ -65,31 +57,22 @@ public:
     
     int next(int price) {
         
-        int cnt =1;
-        bool PreViousGreaterFound = false;
         Node *tmp = vec.size()>0? vec[vec.size()-1]: NULL;
         int spanner =0;
-        while(!PreViousGreaterFound and tmp!=NULL )             //else find the previous greater until then add all the spanner to current spanner
+        while(  tmp!=NULL  and tmp->val <= price)             //else find the previous greater until then add all the spanner to current spanner
         {
-            if(tmp->val <= price)
-            {
-                spanner += tmp->currSpanner;
-                tmp = tmp->PreViousGreater;
-            }
-            if(tmp != NULL && tmp->val > price)                //if we found previous greater ele then break
-            {
-                PreViousGreaterFound = true;
-                break;
-            }
+            spanner += tmp->currSpanner;
+            tmp = tmp->PreViousGreater;
         }
 
         Node *n = new Node(price,spanner+1);
         
-        if(PreViousGreaterFound)          // assign previous greater element to current element
+        if(tmp!=NULL)          // assign previous greater element to current element
         n->PreViousGreater = tmp;
         vec.push_back(n);
-        return spanner+1;
         
+        return spanner+1;
+
     }
 };
 
