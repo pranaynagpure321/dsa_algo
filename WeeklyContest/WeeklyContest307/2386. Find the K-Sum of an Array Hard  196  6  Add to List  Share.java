@@ -25,8 +25,6 @@ create mean heap and interate only those nodes where ans in minimum
 */
 
 
-
-
 class Solution {
     public long kSum(int[] nums, int k) {
      long minus = 0, sum = 0;
