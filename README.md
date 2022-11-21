@@ -62,3 +62,5 @@ java exclusive problems preparation =>https://www.sanfoundry.com/java-program-im
 
 
 great problems repo and reads => https://github.com/AswinBarath
+
+system design repo with diagrams => https://github.com/Jeevan-kumar-Raj/Grokking-System-Design
