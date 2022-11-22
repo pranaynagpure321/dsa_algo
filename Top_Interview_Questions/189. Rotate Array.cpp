@@ -25,5 +25,18 @@ public:
            }  while(cur != i );
        }
 
+        
+        
     }
 };
+
+
+
+//second aaproach to same 
+
+    reverse(nums.begin(),nums.end());
+    k = k%nums.size();
+    reverse(nums.begin(),nums.begin()+k);
+    reverse(nums.begin()+k,nums.end());
+
+
