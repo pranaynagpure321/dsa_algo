@@ -1,6 +1,6 @@
-Prefix Sum
-Binary Index Tree
-MergeSort based
-MultiDimentional DP
-Tabular DP
-Intuitive Prob
+Prefix Sum,
+Binary Index Tree,
+MergeSort based,
+MultiDimentional DP,
+Tabular DP,
+Intuitive Prob,
