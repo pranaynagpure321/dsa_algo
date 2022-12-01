@@ -1,0 +1,78 @@
+class Solution {
+public:
+
+    //create trie of vector words
+    // do dfs on every index in matrix to find word in trie
+    // if word is found make string null and reduce count to avoid repeated searching
+ 
+    class Node 
+    {
+       public:
+       vector<Node *> vec  ;
+       string str;
+       int count ;
+
+       Node()
+       {
+           this->vec =  vector<Node*>(26,NULL);
+           str = "";
+           count =0;
+       } 
+    };
+
+    void insert(Node *curr, string &s)
+    {
+        Node *tmp = curr;
+        for(int i =0 ;i<s.length(); i++)
+        {
+            int idx = s[i] - 'a';
+            if(tmp->vec[idx] == NULL){
+                tmp->vec[idx] = new Node();
+                tmp->count++;
+            }
+            tmp = tmp->vec[idx];
+        }
+
+        tmp->str =s;
+    }
+
+    void dfs(vector<vector<char>>& board,int i , int j, Node *root, vector<string> &ans, vector<vector<bool>> &vis)
+    {   
+        if(i<0 || j<0 || i>= board.size() || j>= board[0].size() || vis[i][j] || root->count==0  ) return;
+        if(root->vec[board[i][j]-'a'] == NULL) return;
+
+        Node *child = root->vec[board[i][j]-'a'];
+        if(child->str.length() >0)
+        {
+            ans.push_back(child->str);
+            child->str= "";
+            if(child->count ==0)
+             root->count--;
+        }
+        vis[i][j] = true;
+       dfs(board,i+1,j,child,ans,vis);
+       dfs(board,i-1,j,child,ans,vis);
+       dfs(board,i,j+1,child,ans,vis);
+       dfs(board,i,j-1,child,ans,vis);
+       vis[i][j] = false;
+    }
+
+
+    vector<string> findWords(vector<vector<char>>& board, vector<string>& words) {
+        Node *head = new Node();
+        for(string &s : words)
+        {
+            insert(head,s);
+        }
+        vector<vector<bool>> vis(board.size(), vector<bool>(board[0].size(),false));
+        vector<string> ans;
+        for(int i =0 ;i< board.size(); i++)
+        {
+            for(int j =0 ;j< board[0].size(); j++)
+            {
+                dfs(board,i,j,head,ans,vis);
+            }
+        }
+       return ans;
+    }
+};
