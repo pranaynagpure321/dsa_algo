@@ -1,7 +1,6 @@
 class Solution {
 public:
 
-
     void dfs(int row , int col, vector<vector<int>> &matrix)
     {
         if(row <0 || col<0 || row>=matrix.size() || col>= matrix[0].size() || matrix[row][col]==1) return;
@@ -20,19 +19,15 @@ public:
        // cout<<"hello"<<endl;
         vector<vector<int>> matrix(3*n, vector<int>(3*n, 0));
 
-        int m =0;
         for(int row = 0 ; row <n ;row++)
-        {
-            string s = grid[m++];
-            int k =0;
+        {         
             for(int col =0 ; col < n ; col++)
             {
-                char ch = s[k++];
-                if(ch =='/')
+                if(grid[row][col] =='/')
                 {
                     matrix[row*3][col*3+2]= matrix[row*3+1][col*3+1]=matrix[row*3+2][col*3] =1;
                 }
-                else if(ch =='\\')
+                else if(grid[row][col] =='\\')
                 {
                     matrix[row*3][col*3]= matrix[row*3+1][col*3+1]=matrix[row*3+2][col*3+2] =1;
                 }
@@ -48,8 +43,7 @@ public:
                     res++;
                 }
             
-         
-
+         //time O(N2)
         return res;
 
     }
