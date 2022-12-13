@@ -32,8 +32,6 @@ public:
 };
 
 //time O(n2)
-
-
 // bottam up java
 class Solution {
     public int minFallingPathSum(int[][] matrix) {
@@ -59,15 +57,9 @@ class Solution {
 
             }
         }
-
         int res = Integer.MAX_VALUE;
-
         for(int j =0 ;j<n ;j++)
         res = Math.min(dp[0][j],res);
-
-
         return res;
-
-
     }
 }
