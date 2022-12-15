@@ -40,3 +40,47 @@ public:
         return dfs(s,p,0,0);
     }
 };
+
+
+//tabulation
+class Solution {
+    public boolean isMatch(String s, String p) {
+
+        //if(s.length() == 0 )return true;
+        int  m = p.length() ,n = s.length() ; // j, i ;    
+        boolean[][] dp = new boolean[m+1][n+1]; 
+       
+         for(int i=p.length()-1;i>=0;i--){      // to handle *, **, *** like patterns starting
+            if(p.charAt(i)!='*')
+                break;
+            else
+                dp[i][s.length()]=true;
+        }
+
+        dp[m][n] = true;
+
+        for(int i = m-1; i>=0 ;i--)
+        {
+            for(int j = n-1 ;j>= 0 ;j--)
+            {
+                if(p.charAt(i) == '?' || p.charAt(i) == s.charAt(j))
+                {
+                    dp[i][j] = dp[i+1][j+1];
+                }
+                else if(p.charAt(i) == '*')
+                {
+                    dp[i][j] =  dp[i+1][j] || dp[i][j+1];
+                }
+                else{
+                    dp[i][j] = false;
+                }
+            }
+        }
+
+        return dp[0][0];
+    }
+}
+
+/*"abcabczzzde"
+p =
+"*abc???de*"*/
