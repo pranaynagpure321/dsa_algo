@@ -38,3 +38,28 @@ public:
         return res>s.size()? -1 : res+1;
     }
 };
+
+
+// greedy approach for the same java
+class Solution {
+    public int minimumPartition(String s, int k) {
+        long  n =0;
+        int res =0;
+        for(int i =0 ;i<s.length(); i++)
+        {
+            n = n*10 + s.charAt(i)-'0';
+
+            if(n>k)
+            {
+                res++;
+                n  = s.charAt(i)-'0';
+            }
+
+            if(n>k)
+            return -1;
+
+        }
+
+        return res+1;
+    }
+}
