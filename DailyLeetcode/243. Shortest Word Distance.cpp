@@ -1,0 +1,30 @@
+class Solution {
+public:
+    int shortestDistance(vector<string>& wordsDict, string word1, string word2) {
+        
+        //getting all the indexs of the word1 and word2
+        vector<int> v1,v2;
+        for(int i =0 ;i< wordsDict.size(); i++)
+        {
+            if(wordsDict[i] == word1)
+            {
+                v1.push_back(i);
+            }
+            else if( wordsDict[i] == word2 )
+            {
+                v2.push_back(i);
+            }
+        }
+
+        int dis = wordsDict.size();
+        int i =0 ,j=0;
+        //min distance between two arrays
+        while(i< v1.size() && j< v2.size())
+        {
+            dis = min ( abs(v1[i] - v2[j]) , dis);
+            if(v1[i] < v2[j]) i++;
+            else j++;
+        }
+        return dis;
+    }
+};
