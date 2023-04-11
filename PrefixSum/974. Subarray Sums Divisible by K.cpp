@@ -24,3 +24,30 @@ public:
     
     }
 };
+
+//java with same frequency operation
+class Solution {
+    public int subarraysDivByK(int[] nums, int k) {
+        int[] counts = new int[k];
+        int sum =0, rem =0;
+        for(int i : nums)
+        {
+            sum +=i;
+            rem = sum%k;
+            if(rem< 0)
+            {
+                rem +=k;
+            }
+            counts[rem]++;
+        }
+
+        int res = counts[0];
+        
+        //below formula used to calculate if frequncey of remainder is greater than 2 then nC2 (n  is frequency)
+        for(int i : counts)
+        {
+            res += (i*(i-1))/2;
+        }
+        return res;
+    }
+}
