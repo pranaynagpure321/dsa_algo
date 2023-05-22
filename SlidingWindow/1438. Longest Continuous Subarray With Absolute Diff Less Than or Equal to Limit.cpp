@@ -17,3 +17,31 @@ public:
         return j - i;
     }
 };
+
+
+// java solution to same problem 
+
+class Solution {
+    public int longestSubarray(int[] nums, int limit) {
+        
+        int i =0 ,j;
+
+        TreeMap<Integer, Integer> mp= new TreeMap<>();
+        
+        for(j = 0 ; j< nums.length; j++)
+        {
+            mp.put(nums[j], 1+ mp.getOrDefault(nums[j],0));
+
+            if(mp.lastEntry().getKey() - mp.firstEntry().getKey() > limit){
+                
+                mp.put(nums[i], mp.get(nums[i]) -1);
+
+                if(mp.get(nums[i]) == 0)
+                mp.remove(nums[i]);
+
+                i++;
+            }
+        }
+        return j - i;
+    }
+}
