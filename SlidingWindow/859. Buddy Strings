@@ -1,0 +1,23 @@
+class Solution {
+public:
+    double findMaxAverage(vector<int>& nums, int k) {
+        for(int i = 1 ; i<nums.size(); ++i)
+        {
+            nums[i] += nums[i-1];
+        }
+
+        double mx =-1e9;
+        for(int j = k-1; j<nums.size(); ++j)
+        {
+            double avg = (nums[j]*1.0);
+            if(j-k>=0 )
+            avg -= nums[j-k];
+            mx = max(mx,  avg/(k*1.0));
+            
+        }
+
+        // space O(1)
+        // time O(N)
+        return mx;
+    }
+};
